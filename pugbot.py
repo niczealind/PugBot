@@ -100,4 +100,4 @@ async def on_message(message):
     if message.content.startswith('!roll'):
         await gamble(client, message)
         
-#client.run(DISCORD_TOKEN)
+client.run(DISCORD_TOKEN)
