@@ -7,7 +7,7 @@ import itertools
 from commands.pug import pug
 from commands.prime import prime
 from commands.gamble import gamble
-from commands.guild import guild
+#from commands.guild import guild
 from commands.four import *
 from commands.create import create
 from commands.create import sendMessage
@@ -88,11 +88,11 @@ async def on_message(message):
     if message.content.startswith('!man'):
         await client.send_message(message.channel, "MAAAAN https://www.youtube.com/watch?v=6E5m_XtCX3c")
         
-    if message.content.startswith('!guild'):
-        if author == 'Bsep#0415' or author == 'Rudamen#9234':
-            await guild(client, message)
-        else:
-            await client.send_message(message.channel, "Invalid User")
+#    if message.content.startswith('!guild'):
+#        if author == 'Bsep#0415' or author == 'Rudamen#9234':
+#            await guild(client, message)
+#        else:
+#            await client.send_message(message.channel, "Invalid User")
 
     if message.content.startswith('!prime'):
         await prime(client, message)
