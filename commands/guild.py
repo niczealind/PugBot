@@ -2,7 +2,7 @@ import requests
 import json
 from commands.pug import *
 
-guild_raiders = requests.get("https://us.api.battle.net/wow/guild/Sargeras/Doppelganger?fields=members&locale=en_US&apikey=")
+guild_raiders = requests.get("https://us.api.battle.net/wow/en/guild/Area-52/MurlocMadness?fields=members&locale=en_US&apikey=")
 guild_dict = json.loads(guild_raiders.text)
 raiders = []
 members = guild_dict["members"]
@@ -25,7 +25,7 @@ get_total_raiders()
 async def guild(client, message):
     for s in raiders:
         name = s
-        server = 'Sargeras'
+        server = 'Area-52'
         target_region = 'us'
         char_info = get_char(name, server, target_region)
         await client.send_message(message.channel, char_info)
